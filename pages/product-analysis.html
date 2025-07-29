@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品分析 - 芯智宝AI平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">芯智宝AI平台</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </button>
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- 侧边栏 -->
+        <div class="w-64 bg-white shadow-sm h-screen">
+            <div class="p-4">
+                <nav class="space-y-2">
+                    <a href="../index.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i data-lucide="home" class="w-5 h-5 mr-3"></i>
+                        首页
+                    </a>
+                    
+                    <!-- 数据洞察 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">数据洞察</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="gold-price.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="trending-up" class="w-5 h-5 mr-3"></i>
+                                今日金价
+                            </a>
+                            <a href="industry-news.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="newspaper" class="w-5 h-5 mr-3"></i>
+                                行业资讯
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 营销助手 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">营销助手</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="marketing-calendar.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="calendar" class="w-5 h-5 mr-3"></i>
+                                营销日历
+                            </a>
+                            <a href="marketing-planning.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="target" class="w-5 h-5 mr-3"></i>
+                                营销策划
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 内容创作 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">内容创作</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="content-creation.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="edit" class="w-5 h-5 mr-3"></i>
+                                文案创作
+                            </a>
+                            <a href="poster-design.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="image" class="w-5 h-5 mr-3"></i>
+                                海报设计
+                            </a>
+                            <a href="video-creation.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="video" class="w-5 h-5 mr-3"></i>
+                                视频创作
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 产品管理 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">产品管理</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="hot-products.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="flame" class="w-5 h-5 mr-3"></i>
+                                爆款产品
+                            </a>
+                            <a href="product-analysis.html" class="flex items-center px-4 py-2 text-blue-700 bg-blue-50 rounded-lg">
+                                <i data-lucide="bar-chart" class="w-5 h-5 mr-3"></i>
+                                产品分析
+                            </a>
+                            <a href="product-discovery.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="search" class="w-5 h-5 mr-3"></i>
+                                选品发现
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 会员智慧营销 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">会员智慧营销</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="member-management.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="users" class="w-5 h-5 mr-3"></i>
+                                会员管理
+                            </a>
+                            <a href="care-tools.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="heart" class="w-5 h-5 mr-3"></i>
+                                关怀工具
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 销冠成长基地 -->
+                    <div class="pt-4">
+                        <h3 class="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">销冠成长基地</h3>
+                        <div class="mt-2 space-y-1">
+                            <a href="training-center.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 mr-3"></i>
+                                培训中心
+                            </a>
+                            <a href="case-library.html" class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
+                                <i data-lucide="book-open" class="w-5 h-5 mr-3"></i>
+                                案例库
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 主内容区域 -->
+        <div class="flex-1 p-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- 页面标题 -->
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900">产品分析</h1>
+                    <p class="mt-2 text-gray-600">深度分析产品数据，洞察市场趋势，优化产品策略</p>
+                </div>
+
+                <!-- 分析概览 -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-2 bg-blue-100 rounded-lg">
+                                <i data-lucide="package" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">分析产品数</p>
+                                <p class="text-2xl font-bold text-gray-900">156</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-2 bg-green-100 rounded-lg">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">增长产品</p>
+                                <p class="text-2xl font-bold text-gray-900">89</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-2 bg-yellow-100 rounded-lg">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">预警产品</p>
+                                <p class="text-2xl font-bold text-gray-900">23</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-2 bg-purple-100 rounded-lg">
+                                <i data-lucide="star" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">推荐产品</p>
+                                <p class="text-2xl font-bold text-gray-900">44</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品分析图表 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">销售趋势分析</h3>
+                        <canvas id="salesTrendChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">产品类别分布</h3>
+                        <canvas id="categoryChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <!-- 产品分析列表 -->
+                <div class="bg-white rounded-lg shadow">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900">产品分析详情</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">产品名称</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">类别</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">销量</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">增长率</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">利润率</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">状态</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <div class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                                    <i data-lucide="gem" class="w-5 h-5 text-gray-600"></i>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">钻石戒指系列</div>
+                                                <div class="text-sm text-gray-500">SKU: DR001</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">钻石饰品</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">1,234</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="text-green-600 font-medium">+15.2%</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">45.6%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">热销</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3">详情</button>
+                                        <button class="text-green-600 hover:text-green-900">优化</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <div class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                                    <i data-lucide="circle" class="w-5 h-5 text-gray-600"></i>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">黄金手链</div>
+                                                <div class="text-sm text-gray-500">SKU: GD002</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">黄金饰品</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">856</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="text-red-600 font-medium">-5.8%</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">38.2%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">预警</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3">详情</button>
+                                        <button class="text-green-600 hover:text-green-900">优化</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <div class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                                    <i data-lucide="heart" class="w-5 h-5 text-gray-600"></i>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">情侣对戒</div>
+                                                <div class="text-sm text-gray-500">SKU: CP003</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">情侣饰品</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">567</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="text-green-600 font-medium">+8.9%</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">42.1%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">稳定</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900 mr-3">详情</button>
+                                        <button class="text-green-600 hover:text-green-900">优化</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+
+        // 销售趋势图表
+        const salesCtx = document.getElementById('salesTrendChart').getContext('2d');
+        new Chart(salesCtx, {
+            type: 'line',
+            data: {
+                labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                datasets: [{
+                    label: '销售额',
+                    data: [120, 190, 300, 500, 200, 300],
+                    borderColor: 'rgb(59, 130, 246)',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // 产品类别分布图表
+        const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+        new Chart(categoryCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['钻石饰品', '黄金饰品', '银饰', '情侣饰品', '其他'],
+                datasets: [{
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: [
+                        'rgb(59, 130, 246)',
+                        'rgb(16, 185, 129)',
+                        'rgb(245, 158, 11)',
+                        'rgb(239, 68, 68)',
+                        'rgb(156, 163, 175)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

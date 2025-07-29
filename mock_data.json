@@ -1,0 +1,274 @@
+{
+  "user": {
+    "id": "user_001",
+    "name": "张经理",
+    "role": "manager",
+    "avatar": "/images/avatar.jpg",
+    "shopName": "金辉珠宝旗舰店"
+  },
+  "dashboard": {
+    "todaySales": "¥128,500",
+    "memberCount": 1900,
+    "hotProduct": "古法金龙凤手镯",
+    "activeMarketing": 3,
+    "salesTrend": {
+      "dates": ["1月19日", "1月20日", "1月21日", "1月22日", "1月23日", "1月24日", "1月25日"],
+      "values": [85000, 92000, 78000, 105000, 118000, 135000, 128500]
+    },
+    "todoList": [
+      "回访高价值会员李女士",
+      "准备周末营销活动",
+      "更新店铺金价信息",
+      "审核新员工培训进度"
+    ]
+  },
+  "goldPrice": {
+    "shopGoldPrice": 485,
+    "shopPlatinumPrice": 320,
+    "marketGoldPrice": 482,
+    "marketPlatinumPrice": 318,
+    "goldChange": "+0.62%",
+    "platinumChange": "+0.31%",
+    "monthlyTrend": {
+      "dates": ["1日", "5日", "10日", "15日", "20日", "25日", "30日"],
+      "goldPrices": [480, 482, 485, 483, 485, 487, 485],
+      "platinumPrices": [315, 317, 320, 318, 320, 322, 320]
+    },
+    "marketAnalysis": "本月黄金市场呈现稳中有升态势，主要受国际地缘政治影响和央行购金需求推动。预计下月金价将在480-490元/克区间震荡，建议适当增加库存。白金市场相对稳定，消费需求平稳。"
+  },
+  "news": [
+    {
+      "category": "政策相关",
+      "title": "央行发布贵金属交易新规",
+      "image": "/images/policy.jpg",
+      "summary": "新规将于下月实施，对珠宝行业产生积极影响，规范市场秩序",
+      "date": "2024-01-15",
+      "content": "中国人民银行近日发布了关于贵金属交易的新规定..."
+    },
+    {
+      "category": "行业动态",
+      "title": "2024春节黄金消费创新高",
+      "image": "/images/industry.jpg",
+      "summary": "春节期间全国黄金销量同比增长25%，龙年生肖金饰受追捧",
+      "date": "2024-01-14",
+      "content": "据中国黄金协会统计，2024年春节期间..."
+    },
+    {
+      "category": "流行趋势",
+      "title": "古法金工艺重回时尚舞台",
+      "image": "/images/trend.jpg",
+      "summary": "传统古法金工艺结合现代设计，成为年轻消费者新宠",
+      "date": "2024-01-13",
+      "content": "近年来，古法金工艺以其独特的质感和文化内涵..."
+    },
+    {
+      "category": "材质工艺资讯",
+      "title": "3D打印技术在珠宝制造中的应用",
+      "image": "/images/technology.jpg",
+      "summary": "新技术助力珠宝行业提升生产效率和设计创新能力",
+      "date": "2024-01-12",
+      "content": "随着3D打印技术的不断发展..."
+    }
+  ],
+  "marketingCalendar": {
+    "2024-01": {
+      "1": {"type": "holiday", "name": "元旦", "suggestion": "新年促销活动"},
+      "14": {"type": "weekend", "name": "周末", "suggestion": "周末特惠"},
+      "22": {"type": "festival", "name": "小年", "suggestion": "年货节活动"},
+      "28": {"type": "weekend", "name": "周末", "suggestion": "春节预热活动"}
+    }
+  },
+  "competitorActivities": [
+    {
+      "brand": "周大福",
+      "activity": "龙年限定款发布",
+      "date": "2024-01-20",
+      "description": "推出生肖主题黄金饰品系列，主打古法工艺"
+    },
+    {
+      "brand": "老凤祥",
+      "activity": "春节黄金节",
+      "date": "2024-01-25",
+      "description": "全场黄金饰品8.8折，满额送礼品"
+    },
+    {
+      "brand": "六福珠宝",
+      "activity": "情人节预热",
+      "date": "2024-02-01",
+      "description": "推出情侣对戒系列，买一送一活动"
+    }
+  ],
+  "hotProducts": [
+    {
+      "rank": 1,
+      "image": "/images/product1.jpg",
+      "category": "黄金手镯",
+      "name": "古法金龙凤呈祥手镯",
+      "sales": 1250,
+      "revenue": "¥2,850,000"
+    },
+    {
+      "rank": 2,
+      "image": "/images/product2.jpg",
+      "category": "黄金项链",
+      "name": "24K金锁骨链",
+      "sales": 980,
+      "revenue": "¥1,960,000"
+    },
+    {
+      "rank": 3,
+      "image": "/images/product3.jpg",
+      "category": "黄金戒指",
+      "name": "龙年生肖戒指",
+      "sales": 856,
+      "revenue": "¥1,712,000"
+    },
+    {
+      "rank": 4,
+      "image": "/images/product4.jpg",
+      "category": "黄金耳环",
+      "name": "古法金花丝耳环",
+      "sales": 742,
+      "revenue": "¥1,484,000"
+    },
+    {
+      "rank": 5,
+      "image": "/images/product5.jpg",
+      "category": "黄金吊坠",
+      "name": "福字转运珠吊坠",
+      "sales": 689,
+      "revenue": "¥1,378,000"
+    }
+  ],
+  "trendAnalysis": {
+    "title": "本月选品趋势",
+    "insights": [
+      "古法金工艺产品需求上升35%",
+      "生肖主题饰品成为热门",
+      "轻奢风格受年轻消费者青睐",
+      "情侣对戒销量增长显著"
+    ]
+  },
+  "memberLevels": [
+    {
+      "level": "高价值会员",
+      "criteria": "年消费≥5万元",
+      "percentage": "8%",
+      "contribution": "45%",
+      "frequency": "≥1.5次/年",
+      "count": 152,
+      "color": "#FFD700"
+    },
+    {
+      "level": "普通会员",
+      "criteria": "年消费1-5万元",
+      "percentage": "32%",
+      "contribution": "40%",
+      "frequency": "≥1次/年",
+      "count": 608,
+      "color": "#FFA500"
+    },
+    {
+      "level": "沉睡会员",
+      "criteria": "年消费＜1万元",
+      "percentage": "60%",
+      "contribution": "15%",
+      "frequency": "＜1次/年",
+      "count": 1140,
+      "color": "#DAA520"
+    }
+  ],
+  "memberList": [
+    {
+      "id": "member_001",
+      "name": "李女士",
+      "phone": "138****8888",
+      "level": "high",
+      "totalSpent": 85000,
+      "lastVisit": "2024-01-20",
+      "frequency": 2.5,
+      "careDate": "2024-01-25"
+    },
+    {
+      "id": "member_002",
+      "name": "王先生",
+      "phone": "139****9999",
+      "level": "high",
+      "totalSpent": 65000,
+      "lastVisit": "2024-01-18",
+      "frequency": 1.8,
+      "careDate": "2024-01-26"
+    },
+    {
+      "id": "member_003",
+      "name": "张女士",
+      "phone": "137****7777",
+      "level": "normal",
+      "totalSpent": 25000,
+      "lastVisit": "2024-01-15",
+      "frequency": 1.2,
+      "careDate": "2024-01-27"
+    }
+  ],
+  "courseCategories": [
+    {
+      "name": "新员工入职",
+      "courses": [
+        {
+          "id": "course_001",
+          "title": "珠宝基础知识",
+          "duration": "2小时",
+          "progress": 0,
+          "image": "/images/course1.jpg",
+          "description": "了解珠宝的基本分类、材质特性和鉴别方法"
+        },
+        {
+          "id": "course_002",
+          "title": "销售礼仪培训",
+          "duration": "1.5小时",
+          "progress": 0,
+          "image": "/images/course2.jpg",
+          "description": "掌握专业的销售礼仪和客户接待技巧"
+        }
+      ]
+    },
+    {
+      "name": "初级课程",
+      "courses": [
+        {
+          "id": "course_003",
+          "title": "黄金产品知识",
+          "duration": "3小时",
+          "progress": 60,
+          "image": "/images/course3.jpg",
+          "description": "深入了解黄金产品的工艺、价值和销售要点"
+        },
+        {
+          "id": "course_004",
+          "title": "客户沟通技巧",
+          "duration": "2小时",
+          "progress": 100,
+          "image": "/images/course4.jpg",
+          "description": "提升与客户沟通的技巧和成交能力"
+        }
+      ]
+    },
+    {
+      "name": "中级课程",
+      "courses": [
+        {
+          "id": "course_005",
+          "title": "高端客户维护",
+          "duration": "2.5小时",
+          "progress": 30,
+          "image": "/images/course5.jpg",
+          "description": "学习如何维护和发展高价值客户关系"
+        }
+      ]
+    }
+  ],
+  "marketingPurposes": ["品牌推广", "促销活动", "新品推广", "节日营销", "周末营销"],
+  "marketingTargets": ["10万以下", "10-20万", "20-50万", "50万以上"],
+  "marketingAudiences": ["会员", "18-25岁", "25-35岁", "35-45岁", "45岁以上"]
+}
+

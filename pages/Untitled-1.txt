@@ -1,0 +1,26 @@
+xinzbai/
+├── index.html                    # 主页（仪表盘）
+├── pages/                        # 功能页面目录
+│   ├── gold-price.html          # 今日金价
+│   ├── industry-news.html       # 行业资讯
+│   ├── marketing-calendar.html  # 营销日历
+│   ├── marketing-planning.html  # 营销策划
+│   ├── content-creation.html    # AI文案生成
+│   ├── poster-design.html       # 海报制作
+│   ├── video-creation.html      # 视频制作
+│   ├── hot-products.html        # 热销产品
+│   ├── product-analysis.html    # 产品分析
+│   ├── product-discovery.html   # 产品发现
+│   ├── member-management.html   # 会员管理
+│   ├── care-tools.html          # 关怀工具
+│   ├── training-center.html     # 培训中心
+│   └── case-library.html        # 案例库
+├── assets/
+│   ├── css/
+│   │   └── style.css            # 样式文件
+│   ├── js/
+│   │   ├── main.js              # 主要JavaScript
+│   │   └── data.js              # 数据文件
+│   └── images/                  # 图片资源
+├── mock_data.json               # 保留数据文件
+└── README.md                    # 项目说明

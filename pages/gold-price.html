@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日金价 - 芯智宝AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-4">
+                    <!-- 返回按钮 -->
+                    <button onclick="history.back()" class="flex items-center px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>
+                        返回
+                    </button>
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-yellow-600">芯智宝AI</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-700">欢迎回来，张经理</span>
+                    <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                        <i data-lucide="user" class="w-4 h-4 text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- 侧边栏 -->
+        <aside class="w-64 bg-white shadow-sm h-screen sticky top-0">
+            <nav class="mt-5 px-2">
+                <div class="space-y-1">
+                    <a href="../index.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5"></i>
+                        仪表盘
+                    </a>
+                    
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            珠宝风尚标
+                        </div>
+                        <a href="gold-price.html" class="bg-yellow-50 text-yellow-700 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="trending-up" class="mr-3 h-4 w-4"></i>
+                            今日金价
+                        </a>
+                        <a href="industry-news.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="newspaper" class="mr-3 h-4 w-4"></i>
+                            行业资讯
+                        </a>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            拓客聚宝盆
+                        </div>
+                        <a href="marketing-calendar.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="calendar" class="mr-3 h-4 w-4"></i>
+                            营销日历
+                        </a>
+                        <a href="marketing-planning.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="megaphone" class="mr-3 h-4 w-4"></i>
+                            营销活动策划
+                        </a>
+                        <a href="content-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="pen-tool" class="mr-3 h-4 w-4"></i>
+                            AI文案生成
+                        </a>
+                        <a href="poster-design.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="image" class="mr-3 h-4 w-4"></i>
+                            海报制作
+                        </a>
+                        <a href="video-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="video" class="mr-3 h-4 w-4"></i>
+                            视频制作
+                        </a>
+                    </div>
+                    
+                                                <div class="mb-4">
+                                <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">单品爆款神器</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="hot-products.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-700 rounded-md">热销产品</a></li>
+                                    <li><a href="product-analysis.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-700 rounded-md">产品分析</a></li>
+                                    <li><a href="product-discovery.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-700 rounded-md">产品发现</a></li>
+                                    <li><a href="product-mining.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-700 rounded-md">爆款挖掘机</a></li>
+                                </ul>
+                            </div>
+                    
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            会员智慧营销
+                        </div>
+                        <a href="member-management.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="users" class="mr-3 h-4 w-4"></i>
+                            会员管理
+                        </a>
+                        <a href="care-tools.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="heart" class="mr-3 h-4 w-4"></i>
+                            关怀工具
+                        </a>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            销冠成长基地
+                        </div>
+                        <a href="training-center.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="graduation-cap" class="mr-3 h-4 w-4"></i>
+                            培训中心
+                        </a>
+                        <a href="case-library.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="book-open" class="mr-3 h-4 w-4"></i>
+                            案例库
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="flex-1 p-6">
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-gray-900">今日金价</h1>
+                <p class="text-gray-600 mt-1">实时金价信息，助您把握市场动态</p>
+            </div>
+
+            
+            <!-- 金价卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">黄金店铺价</p>
+                            <p class="text-2xl font-bold text-gray-900">¥485/克</p>
+                            <p class="text-sm text-green-600">+2.5 较昨日</p>
+                        </div>
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-yellow-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">黄金市场价</p>
+                            <p class="text-2xl font-bold text-gray-900">¥465/克</p>
+                            <p class="text-sm text-green-600">+1.8 较昨日</p>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="dollar-sign" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">铂金店铺价</p>
+                            <p class="text-2xl font-bold text-gray-900">¥215/克</p>
+                            <p class="text-sm text-red-600">-0.5 较昨日</p>
+                        </div>
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="circle" class="w-6 h-6 text-gray-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">铂金市场价</p>
+                            <p class="text-2xl font-bold text-gray-900">¥195/克</p>
+                            <p class="text-sm text-red-600">-1.2 较昨日</p>
+                        </div>
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="trending-down" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 价格趋势图 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">价格趋势</h3>
+                <canvas id="priceChart" width="400" height="200"></canvas>
+            </div>
+
+            <!-- 市场分析 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm border">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">市场分析</h3>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-yellow-400 pl-4">
+                        <h4 class="font-medium text-gray-900">黄金市场</h4>
+                        <p class="text-gray-600 text-sm">受国际金价上涨影响，今日黄金价格小幅上升，建议关注后续走势。</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-4">
+                        <h4 class="font-medium text-gray-900">铂金市场</h4>
+                        <p class="text-gray-600 text-sm">铂金价格略有下调，市场需求相对平稳，适合长期投资。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/data.js"></script>
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+        
+        let uploadedImages = [];
+        
+        // 图片上传功能
+        const imageUpload = document.getElementById('imageUpload');
+        const fileInput = document.getElementById('fileInput');
+        const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+        const imagePreview = document.getElementById('imagePreview');
+        
+        // 点击上传
+        imageUpload.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        // 拖拽上传
+        imageUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            imageUpload.classList.add('border-yellow-400', 'bg-yellow-50');
+        });
+        
+        imageUpload.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            imageUpload.classList.remove('border-yellow-400', 'bg-yellow-50');
+        });
+        
+        imageUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            imageUpload.classList.remove('border-yellow-400', 'bg-yellow-50');
+            const files = Array.from(e.dataTransfer.files);
+            handleImageUpload(files);
+        });
+        
+        // 文件选择
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            handleImageUpload(files);
+        });
+        
+        // 处理图片上传
+        function handleImageUpload(files) {
+            files.forEach(file => {
+                if (!file.type.startsWith('image/')) {
+                    alert('请选择图片文件！');
+                    return;
+                }
+                
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('图片大小不能超过5MB！');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    uploadedImages.push({
+                        file: file,
+                        url: e.target.result,
+                        id: Date.now() + Math.random()
+                    });
+                    updateImagePreview();
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+        
+        // 更新图片预览
+        function updateImagePreview() {
+            if (uploadedImages.length > 0) {
+                uploadPlaceholder.classList.add('hidden');
+                imagePreview.classList.remove('hidden');
+                
+                imagePreview.innerHTML = uploadedImages.map(img => `
+                    <div class="relative group">
+                        <img src="${img.url}" alt="预览图" class="w-full h-24 object-cover rounded-lg">
+                        <button onclick="removeImage('${img.id}')" class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="x" class="w-3 h-3"></i>
+                        </button>
+                    </div>
+                `).join('');
+                
+                lucide.createIcons();
+            } else {
+                uploadPlaceholder.classList.remove('hidden');
+                imagePreview.classList.add('hidden');
+            }
+        }
+        
+        // 删除图片
+        function removeImage(id) {
+            uploadedImages = uploadedImages.filter(img => img.id !== id);
+            updateImagePreview();
+        }
+        
+        // 价格趋势图
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                datasets: [{
+                    label: '黄金价格',
+                    data: [460, 465, 470, 468, 475, 485],
+                    borderColor: 'rgb(234, 179, 8)',
+                    backgroundColor: 'rgba(234, 179, 8, 0.1)',
+                    tension: 0.1
+                }, {
+                    label: '铂金价格',
+                    data: [200, 205, 210, 208, 212, 215],
+                    borderColor: 'rgb(107, 114, 128)',
+                    backgroundColor: 'rgba(107, 114, 128, 0.1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

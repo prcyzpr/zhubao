@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员管理 - 芯智宝AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部导航栏 -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">芯智宝AI平台</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </button>
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- 侧边栏 -->
+        <aside class="w-64 bg-white shadow-sm h-screen sticky top-0">
+            <div class="p-4">
+                <nav class="space-y-2">
+                    <a href="../index.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                        <i data-lucide="home" class="mr-3 h-4 w-4"></i>
+                        首页
+                    </a>
+                    
+                    <!-- 珠宝风尚标 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            珠宝风尚标
+                        </div>
+                        <a href="gold-price.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="trending-up" class="mr-3 h-4 w-4"></i>
+                            今日金价
+                        </a>
+                        <a href="industry-news.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="newspaper" class="mr-3 h-4 w-4"></i>
+                            行业资讯
+                        </a>
+                    </div>
+                    
+                    <!-- 拓客聚宝盆 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            拓客聚宝盆
+                        </div>
+                        <a href="marketing-calendar.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="calendar" class="mr-3 h-4 w-4"></i>
+                            营销日历
+                        </a>
+                        <a href="marketing-planning.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="target" class="mr-3 h-4 w-4"></i>
+                            营销活动策划
+                        </a>
+                        <a href="content-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="edit" class="mr-3 h-4 w-4"></i>
+                            AI文案生成
+                        </a>
+                        <a href="poster-design.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="image" class="mr-3 h-4 w-4"></i>
+                            海报制作
+                        </a>
+                        <a href="video-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="video" class="mr-3 h-4 w-4"></i>
+                            视频制作
+                        </a>
+                    </div>
+                    
+                    <!-- 单品爆款神器 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            单品爆款神器
+                        </div>
+                        <a href="hot-products.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="flame" class="mr-3 h-4 w-4"></i>
+                            热销产品
+                        </a>
+                        <a href="product-analysis.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="bar-chart" class="mr-3 h-4 w-4"></i>
+                            产品分析
+                        </a>
+                        <a href="product-mining.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="search" class="mr-3 h-4 w-4"></i>
+                            爆款挖掘机
+                        </a>
+                    </div>
+                    
+                    <!-- 会员智慧营销 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            会员智慧营销
+                        </div>
+                        <a href="member-management.html" class="text-blue-600 bg-blue-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="users" class="mr-3 h-4 w-4"></i>
+                            会员管理
+                        </a>
+                        <a href="care-tools.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="heart" class="mr-3 h-4 w-4"></i>
+                            关怀工具
+                        </a>
+                    </div>
+                    
+                    <!-- 销冠成长基地 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            销冠成长基地
+                        </div>
+                        <a href="training-center.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="graduation-cap" class="mr-3 h-4 w-4"></i>
+                            培训中心
+                        </a>
+                        <a href="case-library.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="book-open" class="mr-3 h-4 w-4"></i>
+                            案例库
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="flex-1 p-6">
+            <!-- 返回按钮 -->
+            <div class="mb-4">
+                <button onclick="history.back()" class="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                    返回
+                </button>
+            </div>
+            
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-gray-900">会员管理</h1>
+                <p class="text-gray-600 mt-1">管理客户信息，提升服务质量</p>
+            </div>
+
+            <!-- 图片上传区域 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">上传会员资料</h3>
+                <div id="uploadArea" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-yellow-400 transition-colors cursor-pointer">
+                    <div id="uploadContent">
+                        <i data-lucide="upload" class="w-12 h-12 text-gray-400 mx-auto mb-4"></i>
+                        <p class="text-gray-600 mb-2">点击上传或拖拽图片到此处</p>
+                        <p class="text-sm text-gray-500">支持 JPG、PNG、GIF 格式，最大 10MB</p>
+                        <input type="file" id="imageInput" class="hidden" accept="image/*" multiple>
+                    </div>
+                    <div id="imagePreview" class="hidden grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+                </div>
+            </div>
+
+            <!-- 统计卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">总会员数</p>
+                            <p class="text-2xl font-bold text-gray-900">1,900</p>
+                            <p class="text-sm text-green-600">+8 今日新增</p>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">活跃会员</p>
+                            <p class="text-2xl font-bold text-gray-900">1,245</p>
+                            <p class="text-sm text-green-600">65.5% 活跃率</p>
+                        </div>
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="user-check" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">VIP会员</p>
+                            <p class="text-2xl font-bold text-gray-900">156</p>
+                            <p class="text-sm text-yellow-600">8.2% 占比</p>
+                        </div>
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="crown" class="w-6 h-6 text-yellow-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">本月消费</p>
+                            <p class="text-2xl font-bold text-gray-900">¥285K</p>
+                            <p class="text-sm text-green-600">+15.2% 环比</p>
+                        </div>
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i data-lucide="dollar-sign" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 搜索和筛选 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                    <div class="flex-1 max-w-md">
+                        <div class="relative">
+                            <input type="text" placeholder="搜索会员姓名、手机号..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            <option>全部等级</option>
+                            <option>普通会员</option>
+                            <option>银卡会员</option>
+                            <option>金卡会员</option>
+                            <option>钻石会员</option>
+                        </select>
+                        
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            <option>全部状态</option>
+                            <option>活跃</option>
+                            <option>沉睡</option>
+                            <option>流失</option>
+                        </select>
+                        
+                        <button class="px-4 py-2 bg-yellow-500 text-white rounded-lg font-medium hover:bg-yellow-600">
+                            <i data-lucide="plus" class="w-4 h-4 mr-2 inline"></i>
+                            新增会员
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 会员列表 -->
+            <div class="bg-white rounded-lg shadow-sm border">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">会员信息</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">等级</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">消费金额</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">最后消费</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">状态</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center">
+                                            <span class="text-pink-600 font-medium">李</span>
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">李女士</div>
+                                            <div class="text-sm text-gray-500">138****5678</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">金卡会员</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">¥125,800</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-01-15</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">活跃</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-900">编辑</button>
+                                    <button class="text-green-600 hover:text-green-900">关怀</button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                            <span class="text-blue-600 font-medium">王</span>
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">王先生</div>
+                                            <div class="text-sm text-gray-500">139****1234</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 py-1 text-xs font-medium bg-purple-100 text-purple-800 rounded-full">钻石会员</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">¥58,900</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-01-08</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">沉睡</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                                    <button class="text-blue-600 hover:text-blue-900">编辑</button>
+                                    <button class="text-green-600 hover:text-green-900">关怀</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+        
+        // 图片上传功能
+        const uploadArea = document.getElementById('uploadArea');
+        const imageInput = document.getElementById('imageInput');
+        const uploadContent = document.getElementById('uploadContent');
+        const imagePreview = document.getElementById('imagePreview');
+
+        // 点击上传
+        uploadArea.addEventListener('click', () => {
+            imageInput.click();
+        });
+
+        // 拖拽上传
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('border-yellow-400');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('border-yellow-400');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('border-yellow-400');
+            const files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        // 文件选择
+        imageInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            const validFiles = [];
+            
+            for (let file of files) {
+                if (file.type.startsWith('image/')) {
+                    if (file.size <= 10 * 1024 * 1024) { // 10MB
+                        validFiles.push(file);
+                    } else {
+                        alert(`文件 ${file.name} 超过10MB限制`);
+                    }
+                } else {
+                    alert(`文件 ${file.name} 不是有效的图片格式`);
+                }
+            }
+            
+            if (validFiles.length > 0) {
+                displayImages(validFiles);
+            }
+        }
+
+        function displayImages(files) {
+            uploadContent.classList.add('hidden');
+            imagePreview.classList.remove('hidden');
+            imagePreview.innerHTML = '';
+            
+            files.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'relative group';
+                    imageContainer.innerHTML = `
+                        <img src="${e.target.result}" alt="预览图" class="w-full h-32 object-cover rounded-lg">
+                        <button onclick="removeImage(${index})" class="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i data-lucide="x" class="w-4 h-4"></i>
+                        </button>
+                    `;
+                    imagePreview.appendChild(imageContainer);
+                    lucide.createIcons();
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function removeImage(index) {
+            // 这里可以添加删除图片的逻辑
+            console.log('删除图片:', index);
+        }
+    </script>
+</body>
+</html>

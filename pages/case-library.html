@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例库 - 芯智宝AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">芯智宝AI平台</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </button>
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- 侧边栏 -->
+        <aside class="w-64 bg-white shadow-sm h-screen sticky top-0">
+            <div class="p-4">
+                <nav class="space-y-2">
+                    <a href="../index.html" class="flex items-center px-2 py-2 text-gray-700 hover:bg-gray-50 rounded-md">
+                        <i data-lucide="home" class="w-4 h-4 mr-3"></i>
+                        首页
+                    </a>
+                    
+                    <!-- 珠宝风尚标 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            珠宝风尚标
+                        </div>
+                        <a href="gold-price.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="trending-up" class="mr-3 h-4 w-4"></i>
+                            今日金价
+                        </a>
+                        <a href="industry-news.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="newspaper" class="mr-3 h-4 w-4"></i>
+                            行业资讯
+                        </a>
+                    </div>
+                    
+                    <!-- 拓客聚宝盆 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            拓客聚宝盆
+                        </div>
+                        <a href="marketing-calendar.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="calendar" class="mr-3 h-4 w-4"></i>
+                            营销日历
+                        </a>
+                        <a href="marketing-planning.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="target" class="mr-3 h-4 w-4"></i>
+                            营销活动策划
+                        </a>
+                        <a href="content-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="edit" class="mr-3 h-4 w-4"></i>
+                            AI文案生成
+                        </a>
+                        <a href="poster-design.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="image" class="mr-3 h-4 w-4"></i>
+                            海报制作
+                        </a>
+                        <a href="video-creation.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="video" class="mr-3 h-4 w-4"></i>
+                            视频制作
+                        </a>
+                    </div>
+                    
+                    <!-- 单品爆款神器 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            单品爆款神器
+                        </div>
+                        <a href="hot-products.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="flame" class="mr-3 h-4 w-4"></i>
+                            热销产品
+                        </a>
+                        <a href="product-analysis.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="bar-chart" class="mr-3 h-4 w-4"></i>
+                            产品分析
+                        </a>
+                        <a href="product-mining.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="search" class="mr-3 h-4 w-4"></i>
+                            爆款挖掘机
+                        </a>
+                    </div>
+                    
+                    <!-- 会员智慧营销 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            会员智慧营销
+                        </div>
+                        <a href="member-management.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="users" class="mr-3 h-4 w-4"></i>
+                            会员管理
+                        </a>
+                        <a href="care-tools.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="heart" class="mr-3 h-4 w-4"></i>
+                            关怀工具
+                        </a>
+                    </div>
+                    
+                    <!-- 销冠成长基地 -->
+                    <div class="space-y-1">
+                        <div class="text-gray-500 text-xs font-semibold uppercase tracking-wider px-2 py-2">
+                            销冠成长基地
+                        </div>
+                        <a href="training-center.html" class="text-gray-700 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="graduation-cap" class="mr-3 h-4 w-4"></i>
+                            培训中心
+                        </a>
+                        <a href="case-library.html" class="text-blue-600 bg-blue-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <i data-lucide="book-open" class="mr-3 h-4 w-4"></i>
+                            案例库
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <div class="flex-1 p-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- 返回按钮 -->
+                <div class="mb-6">
+                    <button onclick="history.back()" class="flex items-center text-gray-600 hover:text-gray-900">
+                        <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                        返回
+                    </button>
+                </div>
+
+                <!-- 页面标题 -->
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">案例库</h1>
+                    <p class="text-gray-600">学习成功案例，提升销售技能</p>
+                </div>
+
+                <!-- 搜索和筛选 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1">
+                            <div class="relative">
+                                <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"></i>
+                                <input type="text" placeholder="搜索案例标题、关键词..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">所有分类</option>
+                                <option value="sales">销售技巧</option>
+                                <option value="service">客户服务</option>
+                                <option value="marketing">营销策略</option>
+                                <option value="management">团队管理</option>
+                            </select>
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">难度等级</option>
+                                <option value="beginner">初级</option>
+                                <option value="intermediate">中级</option>
+                                <option value="advanced">高级</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例分类 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-lg text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="target" class="w-8 h-8"></i>
+                            <span class="text-2xl font-bold">24</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">销售技巧</h3>
+                        <p class="text-blue-100">实战销售案例分析</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-lg text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="heart" class="w-8 h-8"></i>
+                            <span class="text-2xl font-bold">18</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">客户服务</h3>
+                        <p class="text-green-100">优质服务案例</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-lg text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="trending-up" class="w-8 h-8"></i>
+                            <span class="text-2xl font-bold">15</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">营销策略</h3>
+                        <p class="text-purple-100">创新营销方案</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 p-6 rounded-lg text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                            <span class="text-2xl font-bold">12</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">团队管理</h3>
+                        <p class="text-orange-100">管理经验分享</p>
+                    </div>
+                </div>
+
+                <!-- 热门案例 -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">热门案例</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- 案例卡片1 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        销售技巧
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.8</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">如何在30分钟内成交高价值客户</h3>
+                                <p class="text-gray-600 text-sm mb-4">通过精准的需求分析和专业的产品介绍，成功说服客户购买价值8万元的钻石套装...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>1,234</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 案例卡片2 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        客户服务
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.9</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">化解客户投诉的黄金法则</h3>
+                                <p class="text-gray-600 text-sm mb-4">面对愤怒的客户投诉，如何通过有效沟通不仅解决问题，还让客户成为忠实粉丝...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>987</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 案例卡片3 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                        营销策略
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.7</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">朋友圈营销的正确打开方式</h3>
+                                <p class="text-gray-600 text-sm mb-4">通过精心设计的朋友圈内容，一个月内新增客户50+，销售额提升200%...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>1,567</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 案例卡片4 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                                        团队管理
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.6</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">新员工快速成长的培养秘诀</h3>
+                                <p class="text-gray-600 text-sm mb-4">通过系统化的培训体系，让新员工在3个月内达到资深销售的业绩水平...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>756</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 案例卡片5 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        销售技巧
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.8</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">老客户转介绍的实战技巧</h3>
+                                <p class="text-gray-600 text-sm mb-4">通过建立信任关系和提供超值服务，让老客户主动为你介绍新客户...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>1,123</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 案例卡片6 -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        客户服务
+                                    </span>
+                                    <span class="text-sm text-gray-500">⭐ 4.9</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">VIP客户维护的精细化管理</h3>
+                                <p class="text-gray-600 text-sm mb-4">建立VIP客户档案，提供个性化服务，实现客户终身价值最大化...</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i data-lucide="eye" class="w-4 h-4 mr-1"></i>
+                                        <span>892</span>
+                                    </div>
+                                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                        查看详情
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分页 -->
+                <div class="flex items-center justify-between">
+                    <div class="text-sm text-gray-700">
+                        显示 <span class="font-medium">1</span> 到 <span class="font-medium">6</span> 共 <span class="font-medium">69</span> 个案例
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                            上一页
+                        </button>
+                        <button class="px-3 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">
+                            1
+                        </button>
+                        <button class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                            2
+                        </button>
+                        <button class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                            3
+                        </button>
+                        <button class="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                            下一页
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化图标
+        lucide.createIcons();
+    </script>
+</body>
+</html>

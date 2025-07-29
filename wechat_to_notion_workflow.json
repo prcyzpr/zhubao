@@ -1,0 +1,169 @@
+{
+  "name": "微信公众号文章到Notion",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "articleJsonString",
+              "value": "{\"title\":\"示例标题 - 请替换此节点\",\"introduction\":\"这是一段示例引言。\n它包含换行符。\",\"sections\":[{\"heading\":\"章节1标题\",\"content\":\"这是章节1的内容。\n也包含换行符。\"},{\"heading\":\"章节2标题\",\"content\":\"这是章节2的内容。\"}]}"
+            }
+          ]
+        },
+        "options": {
+          "keepInputData": false
+        }
+      },
+      "id": "b2c3d4e5-f6a7-8901-2345-678901bcdef0",
+      "name": "设置文章数据 (替换为AI Agent)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "此节点用于提供示例文章JSON数据。\n请将其替换为您实际的AI Agent节点，并确保其输出名为 'articleJsonString' 的JSON字符串。"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "imageUrl",
+              "value": "https://via.placeholder.com/600x400.png?text=示例图片(请替换)"
+            }
+          ]
+        },
+        "options": {
+          "keepInputData": true
+        }
+      },
+      "id": "c3d4e5f6-a7b8-9012-3456-789012cdef01",
+      "name": "设置图片URL (替换为图片源)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "此节点用于提供示例图片URL。\n请将其替换为您实际获取图片URL的节点，并确保其输出名为 'imageUrl'。"
+    },
+    {
+      "parameters": {
+        "jsCode": "const articleDataString = $input.item.json.articleJsonString;\nconst imageUrl = $input.item.json.imageUrl;\nlet articleData;\n\n// Attempt to clean and parse JSON\nlet cleanedJsonString = articleDataString;\nif (typeof cleanedJsonString === 'string') {\n  // Remove Markdown code block markers if present\n  cleanedJsonString = cleanedJsonString.replace(/^```json\s*|\s*```$/g, '');\n  cleanedJsonString = cleanedJsonString.trim();\n}\n\ntry {\n  articleData = JSON.parse(cleanedJsonString);\n} catch (error) {\n  console.error(\"Error parsing article JSON:\", error);\n  console.error(\"Cleaned JSON string was:\", cleanedJsonString);\n  return [{ json: { error: \"Failed to parse article JSON\", details: error.message, problematicString: cleanedJsonString } }];\n}\n\nconst title = articleData.title || '无标题';\nconst introduction = articleData.introduction ? articleData.introduction.replace(/\n/g, '<br>') : '';\nlet sectionsHtml = '';\n\nif (articleData.sections && Array.isArray(articleData.sections)) {\n  articleData.sections.forEach(section => {\n    const heading = section.heading || '';\n    const content = section.content ? section.content.replace(/\n/g, '<br>') : '';\n    sectionsHtml += `<h2>${heading}</h2><p>${content}</p>`;\n  });\n}\n\nconst html = `\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>${title}</title>\n    <style>\n        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }\n        img { max-width: 100%; height: auto; display: block; margin: 20px 0; }\n        h1, h2 { color: #333; }\n    </style>\n</head>\n<body>\n    <h1>${title}</h1>\n    <p>${introduction}</p>\n    ${imageUrl ? `<img src=\"${imageUrl}\" alt=\"文章图片\">` : ''}\n    ${sectionsHtml}\n</body>\n</html>\n`;\n\nreturn [{\n  json: {\n    title: title,\n    html: html,\n    imageUrl: imageUrl\n  }\n}];"
+      },
+      "id": "d4e5f6a7-b8c9-0123-4567-890123def012",
+      "name": "转换为HTML",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "notionApi",
+        "notionApi": {
+          "id": "YOUR_NOTION_CREDENTIALS_ID_REPLACE_ME" 
+        },
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": "YOUR_NOTION_DATABASE_ID_REPLACE_ME",
+        "title": "={{ $json.title }}", 
+        "titlePropertyName": "任务名称", 
+        "additionalFields": {
+          "properties": [
+            {
+              "key": "文章内容",
+              "type": "Rich Text",
+              "value": "={{ $json.html }}"
+            },
+            {
+              "key": "图片URL",
+              "type": "URL",
+              "value": "={{ $json.imageUrl }}"
+            }
+          ]
+        }
+      },
+      "id": "e5f6a7b8-c9d0-1234-5678-901234ef0123",
+      "name": "写入Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1, 
+      "position": [
+        1050,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "重要提示:\n1. 请将 'YOUR_NOTION_CREDENTIALS_ID_REPLACE_ME' 替换为您的实际Notion凭证ID。\n2. 请将 'YOUR_NOTION_DATABASE_ID_REPLACE_ME' 替换为您的实际Notion数据库ID。\n3. 确保您的Notion数据库中存在以下属性，并且类型匹配：\n   - '任务名称' (Title类型) - 这是页面的主标题属性。\n   - '文章内容' (Rich Text类型)\n   - '图片URL' (URL类型)\n4. 确保您的Notion集成具有对该数据库的写入权限。"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "设置文章数据 (替换为AI Agent)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置文章数据 (替换为AI Agent)": {
+      "main": [
+        [
+          {
+            "node": "设置图片URL (替换为图片源)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置图片URL (替换为图片源)": {
+      "main": [
+        [
+          {
+            "node": "转换为HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "转换为HTML": {
+      "main": [
+        [
+          {
+            "node": "写入Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "f1g2h3i4-j5k6-7890-1234-567890ghijkl",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}
